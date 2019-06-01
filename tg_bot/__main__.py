@@ -137,11 +137,11 @@ def send_start(bot, update):
     text = "Hey there! My name is Marsh Mallow - I'm here to help you manage your groups!\n\
 Click Help button to find out more about how to use me to my full potential.\n\n"
     
-    "[Source](google.com)"
+   text += "[Source](google.com)"
 
-    text += "Join [Marsh Mallow Group](https://telegram.me/MarshMallowBotHelp) if you need any support or help\n\n\
-Follow [Marsh Mallow Channel](https://telegram.me/MarshMallowNews) if you want to keep up with the news, updates and bot downtime!\n\n\
-Made with love by [this guy](https://telegram.me/unknown_guy1)\n\nWant to add me to your group? [Click here!](https://telegram.me/marsh_mallow_bot?startgroup=add)"
+    text += "Join [Sara Bot Help Group](https://telegram.me/saraak_BotHelp) if you need any support or help.\n\n\
+Follow [Sara Bot News Channel](https://telegram.me/SaraakNews) if you want to keep updated with the news, updates and bot downtime!!\n\n\
+Maintained by [](https://telegram.me/Aditya19v)\n\nWant to add me to your group? [Click here!](https://telegram.me/saraak_bot?startgroup=add)"
 
 
     keyboard = [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
