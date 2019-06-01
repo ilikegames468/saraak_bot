@@ -1,3 +1,5 @@
+from tg_bot import dispatcher
+
 RUN_STRINGS = (
     "Dove pensi di andare?",
     "Huh? cosa? sono riusciti a scappare?",
