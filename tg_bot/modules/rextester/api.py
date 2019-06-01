@@ -1,6 +1,6 @@
 import requests
 
-from haruka.modules.rextester.langs import languages
+from tg_bot.modules.rextester.langs import languages
 
 ### API warper for rextester.com
 ## Author: Nitan Alexandru Marcel.
