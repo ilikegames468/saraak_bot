@@ -137,7 +137,7 @@ def send_start(bot, update):
     text = "Hey there! My name is Marsh Mallow - I'm here to help you manage your groups!\n\
 Click Help button to find out more about how to use me to my full potential.\n\n"
     
-    "[Source](google.com)
+    "[Source](google.com)"
 
     text += "Join [Marsh Mallow Group](https://telegram.me/MarshMallowBotHelp) if you need any support or help\n\n\
 Follow [Marsh Mallow Channel](https://telegram.me/MarshMallowNews) if you want to keep up with the news, updates and bot downtime!\n\n\
