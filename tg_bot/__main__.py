@@ -10,17 +10,17 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown
 
-from tg_bot import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, \
+from haruka import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, \
     ALLOW_EXCL
 
 
 #Needed to dynamically load modules
 #NOTE: Module order is not guaranteed, specify that in the config file!
-from tg_bot.modules import ALL_MODULES
-from tg_bot.modules.helper_funcs.chat_status import is_user_admin
-from tg_bot.modules.helper_funcs.misc import paginate_modules
-from tg_bot.modules.translations.strings import tld, tld_help
-from tg_bot.modules.connection import connected
+from haruka.modules import ALL_MODULES
+from haruka.modules.helper_funcs.chat_status import is_user_admin
+from haruka.modules.helper_funcs.misc import paginate_modules
+from haruka.modules.translations.strings import tld, tld_help
+from haruka.modules.connection import connected
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -36,7 +36,7 @@ USER_SETTINGS = {}
 GDPR = []
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("tg_bot.modules." + module_name)
+    imported_module = importlib.import_module("haruka.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -122,7 +122,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("I iz alive saaaaar")
+        update.effective_message.reply_text("Hey there! I'm alive :3")
 
 
 def send_start(bot, update):
@@ -134,17 +134,17 @@ def send_start(bot, update):
         pass
 
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
-    text = "Hey there! My name is BlaBlaBla - I'm here to help you manage your groups!\n\
+    text = "Hey there! My name is Marsh Mallow - I'm here to help you manage your groups!\n\
 Click Help button to find out more about how to use me to my full potential.\n\n"
 
-    text += "Join [Crabinz Group](https://t.me/Crabinz) ( @CraBinz ) if you Want Free Accounts Like, Netflix, Spotify etc.\n\n\
-    For lit and Cool Giveaways DM [CraBinzGiveawaybot](https://t.me/CraBinzGiveawaybot)\n\n\
-Also Join [PrimeFlix Group](https://t.me/primeflixgroup) ( @Primeflixgroup ) if you Want Free Accounts Like, Netflix, Spotify etc.\n\n\
-Join [PrimeFlix Channel](https://t.me/primeflix) ( @Primeflix ) for amazing Stuff.\n\n\
-Special Thanks to @peaktogoo & His Bot @HarukaAyaBot 🙂\n\n\
-My Souce Available Here [Source](https://github.com/Prakasaka/HarukaAya)\n\n\
-Want to add me to your group? [Click here!](t.me/?startgroup=true)"
+    text += "Join [Marsh Mallow Group](https://telegram.me/MarshMallowBotHelp) if you need any support or help\n\n\
+Follow [Marsh Mallow Channel](https://telegram.me/MarshMallowNews) if you want to keep up with the news, updates and bot downtime!\n\n\
+Made with love by [this guy](https://telegram.me/unknown_guy1)\n\nWant to add me to your group? [Click here!](https://telegram.me/marsh_mallow_bot?startgroup=add)"
 
+
+    keyboard = [[InlineKeyboardButton(text="📢 Support Group", url="https://t.me/MarshMallowBotHelp")]]
+    keyboard += [[InlineKeyboardButton(text="📢 Support Channel", url="https://t.me/MarshMallowNews")]]
+    keyboard += [[InlineKeyboardButton(text="🛠 Control panel", callback_data="cntrl_panel_M")]]
     keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
@@ -178,7 +178,7 @@ def control_panel(bot, update):
 
         LOGGER.info(query.data)
     else:
-        M_match = "ThugBot is best bot" #LMAO, don't uncomment
+        M_match = "Haruka Aya is best bot" #LMAO, don't uncomment
 
     if M_match:
         text = "*Control panel* 🛠"
