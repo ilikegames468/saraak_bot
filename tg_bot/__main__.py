@@ -136,15 +136,14 @@ def send_start(bot, update):
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
     text = "Hey there! My name is Marsh Mallow - I'm here to help you manage your groups!\n\
 Click Help button to find out more about how to use me to my full potential.\n\n"
+    
+    "[Source](google.com)
 
     text += "Join [Marsh Mallow Group](https://telegram.me/MarshMallowBotHelp) if you need any support or help\n\n\
 Follow [Marsh Mallow Channel](https://telegram.me/MarshMallowNews) if you want to keep up with the news, updates and bot downtime!\n\n\
 Made with love by [this guy](https://telegram.me/unknown_guy1)\n\nWant to add me to your group? [Click here!](https://telegram.me/marsh_mallow_bot?startgroup=add)"
 
 
-    keyboard = [[InlineKeyboardButton(text="📢 Support Group", url="https://t.me/MarshMallowBotHelp")]]
-    keyboard += [[InlineKeyboardButton(text="📢 Support Channel", url="https://t.me/MarshMallowNews")]]
-    keyboard += [[InlineKeyboardButton(text="🛠 Control panel", callback_data="cntrl_panel_M")]]
     keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
