@@ -135,9 +135,7 @@ def send_start(bot, update):
 
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
     text = "Hey there! My name is Sara - I'm here to help you manage your groups!!\n\
-Click Help button to find out more about how to use me to my full potential.\n\n"
-    
-   text += "[Source](google.com)"
+Click Help button to find out more about how to use me to my full potential.\n\n\n\t[Source](google.com)"
 
     text += "Join [Sara Bot Help Group](https://telegram.me/saraak_BotHelp) if you need any support or help.\n\n\
 Follow [Sara Bot News Channel](https://telegram.me/SaraakNews) if you want to keep updated with the news, updates and bot downtime!!\n\n\
