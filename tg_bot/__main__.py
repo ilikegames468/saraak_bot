@@ -144,7 +144,7 @@ Follow [Marsh Mallow Channel](https://telegram.me/MarshMallowNews) if you want t
 Made with love by [this guy](https://telegram.me/unknown_guy1)\n\nWant to add me to your group? [Click here!](https://telegram.me/marsh_mallow_bot?startgroup=add)"
 
 
-    keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
+    keyboard = [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
     update.effective_message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
