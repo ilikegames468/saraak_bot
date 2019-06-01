@@ -410,12 +410,6 @@ def main():
     start_callback_handler = CallbackQueryHandler(send_start, pattern=r"bot_start")
     dispatcher.add_handler(start_callback_handler)
 
-    cntrl_panel = CommandHandler("controlpanel", control_panel)
-    cntrl_panel_callback_handler = CallbackQueryHandler(control_panel, pattern=r"cntrl_panel")
-    dispatcher.add_handler(cntrl_panel_callback_handler)
-    dispatcher.add_handler(cntrl_panel)
-
-    
 
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
